@@ -9,7 +9,7 @@ bot = Client("bot",api_id=6, api_hash="eb06d4abfb49dc3eeb1aeb98ae0f581e", bot_to
 async def purn(_, message):
     await message.reply("Yeah")
     user_in = message.text[2:]
-    cmd = f"mkdir Purn && cd Purn && ph {user_in} --max=20 --download"
+    cmd = f"mkdir -y Purn && cd Purn && ph {user_in} --max=10 --download"
     proc = await asyncio.create_subprocess_shell(
 
         cmd,
