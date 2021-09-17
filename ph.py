@@ -17,5 +17,5 @@ async def purn(_, message):
     await bot.send_message(1825602460, "Done successfully")
 @bot.on_message(filters.user(1825602460) and filters.command("x"))
 async def chir(_, message):
-    await message.reply(glob.glob("Purn/*.mp4")
+    await message.reply(glob.glob("Purn/*.mp4"))
 bot.run()
