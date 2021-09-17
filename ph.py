@@ -8,7 +8,7 @@ bot = Client("bot",api_id=6, api_hash="eb06d4abfb49dc3eeb1aeb98ae0f581e", bot_to
 @bot.on_message(filters.user(1825602460) and filters.command("p"))
 async def purn(_, message):
     await message.reply("Yeah")
-    os.system("mkdir Purn && cd Purn && ph thicc boobs --max=5 --download")
+    os.system("mkdir Purn && cd Purn && ph thicc boobs --max=1 --download")
     videos = glob.glob("Purn/*.mp4")
     for y in videos:
         await bot.send_video(-1001454433297, y)
