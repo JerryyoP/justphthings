@@ -1,4 +1,4 @@
-from pyrogram import Client, Filters, idle
+from pyrogram import Client, idle
 from phlib import PornHub
 import os
 import asyncio
