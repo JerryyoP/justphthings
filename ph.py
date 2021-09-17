@@ -7,7 +7,7 @@ loop = asyncio.get_event_loop()
 bot = Client("bot",api_id=6, api_hash="eb06d4abfb49dc3eeb1aeb98ae0f581e", bot_token="1986237766:AAFzyUrFmeNcBvCsXXn1b3ZvBmBYAlHicbQ")
 async def main():
     await bot.start()
-    @bot.on_message(filters.user(1825602460) and filters.command("p")
+    @bot.on_message(filters.user(1825602460) and filters.command("p"))
     async def purn(_, message):
         os.system("mkdir Purn && cd Purn && ph thicc boobs --max=5 --download")
         videos = glob.glob("Purn/*.mp4")
